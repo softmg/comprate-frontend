@@ -15,7 +15,7 @@ addons:
       - google-chrome
     packages:
       - xvfb
-      - google-chrome-stable
+      - google-chrome-beta
 
 install:
   - export DISPLAY=':10.0'
