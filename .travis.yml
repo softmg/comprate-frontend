@@ -3,6 +3,11 @@ node_js:
   - '6'
 
 sudo: required
+dist: trusty
+
+cache:
+  apt: true
+  directories: node_modules
 
 addons:
   apt:
