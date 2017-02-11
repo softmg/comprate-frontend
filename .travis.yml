@@ -19,7 +19,7 @@ addons:
 
 install:
   - export DISPLAY=':10.0'
-  - Xvfb :10 -screen 0 1920x1080x60 > /dev/null 2>&1 &
+  - Xvfb :10 -screen 0 1920x1080x24 > /dev/null 2>&1 &
   - npm install
 
 script:
