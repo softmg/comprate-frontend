@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - '6'
+
+sudo: required
+dist: trusty
+
+cache:
+  apt: true
+  directories: node_modules
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - xvfb
+      - google-chrome-beta
+
+install:
+  - export DISPLAY=':10.0'
+  - Xvfb :10 -screen 0 1920x1080x24 > /dev/null 2>&1 &
+  - npm install
+
+script:
+  - npm run e2e
+  - npm run test-single-run
+
+notifications:
+  slack:
+    rooms:
+      secure: fa9QQIOkMdZz1UkIav/hFv88/mydCrYgTkxCLbiCLqh0+3gK757Jc5Wnid2nYBDebWHlw6HQEhksgFDfCvyWRMzqPahy1fn6ma6BC1CEWGHgCoVI6PErmPC5pQQiRMmuJoJB2wPoawHL0w3MUsJgKAanSoab/SDD3L/u8mhYSAmpCO/2vV9WvWgsqaIdLc9v9lsavedrEUaEwjvBVMX9pqXs6KEy2b3eJTITNir1hYlK/Z8E8cHE5s2dbz+NaDUakLrILrnAc3dwZI0cX8K+vMxVx6ZwQz2dYfN1v/fTBfDa6QABG/4C4gANn83ebLiTTT3MvWSxBTog9lHm1fKnElEoK3iI7jkMiUjYHUzG7fj8CoMonjmov+PJUAUdMS5RGmDTXGqlPSV8dQB30RQcfj3yf/B46aoe403i0MfekBJIS8t55GirTezTlrhJwrwpKamHzgG8LReKpbFS8mtv4BXQDcgYm7HA4Ut8ldTGE+K8NTWMm1munq+eHtF+aTaigoh0m24KUsfWFwXbtATcabDbR3KnW24v0fygVW/hF42RIEFOBCurkY7Lhliiw4NT412+GPyfz1y7ccvdyQYNAMI76bifpO+3k8KZdLOgzCrcJuL3jrwYjA6pFC0TdNYzpjZANZLKSRk5KgOD50SMG4fRIOMrJnwS9gahsF3ZoXs=

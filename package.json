@@ -7,8 +7,10 @@
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
+    "test-single-run": "ng test --single-run=true",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e --port 4202",
+    "build": "ng build"
   },
   "private": true,
   "dependencies": {
