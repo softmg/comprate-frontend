@@ -4,6 +4,8 @@ Web frontend for [comprate][comprate]
 The project "comprate" will be usefull for calculating the rating of the your computer.
 Also we can offer the best way for upgrade your computer.
 
+[![Build Status](https://travis-ci.org/softmg/comprate-frontend.svg?branch=master)](https://travis-ci.org/softmg/comprate-frontend)
+
 ## Requirements
 - npm
 - nodejs
@@ -14,7 +16,7 @@ Also we can offer the best way for upgrade your computer.
 - code styles: Just follow [code styles for angular2][angular2-code-styles]
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
@@ -24,16 +26,16 @@ You can also use `ng generate directive/pipe/service/class/module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. 
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. 
 Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma][karma].
+Run `npm run test` to execute the unit tests via [Karma][karma].
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor][protractor].
+Run `npm run e2e` to execute the end-to-end tests via [Protractor][protractor].
 Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
