@@ -1,6 +1,6 @@
-import { ComprateFrontendPage } from './app.po';
+import {ComprateFrontendPage} from './app.po';
 
-describe('comprate-frontend App', function() {
+describe('comprate-frontend App', function () {
   let page: ComprateFrontendPage;
 
   beforeEach(() => {
