@@ -8,7 +8,7 @@
     "prebuild": "tslint src",
     "build": "webpack",
     "pree2e": "webdriver-manager update",
-    "e2e": "concurrently --kill-others --success first 'PORT=8888 npm start' 'sleep 2; PORT=8888 protractor'",
+    "e2e": "concurrently --kill-others --success first 'PORT=3030 npm start' 'sleep 2; PORT=3030 protractor'",
     "test": "karma start",
     "test-single-run": "karma start --single-run"
   },
