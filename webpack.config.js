@@ -63,14 +63,16 @@ let config = {
       loaders: ['babel-loader']
     }),
 
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      title: 'Comp Rate',
-    }),
-
     // new FaviconsWebpackPlugin('favicon.png'),
   ]
 };
+
+if (!isTest) {
+  config.plugins.push(new HtmlWebpackPlugin({
+    template: './index.html',
+    title: 'Comp Rate',
+  }));
+}
 
 if (isDev) {
   config.devtool = 'eval-source-map';

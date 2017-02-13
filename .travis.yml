@@ -7,7 +7,9 @@ dist: trusty
 
 cache:
   apt: true
-  directories: node_modules
+  directories:
+    - node_modules
+    - .happypack
 
 addons:
   apt:
