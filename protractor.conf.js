@@ -10,7 +10,7 @@ const SpecReporter = require('jasmine-spec-reporter');
 const port = process.env.PORT || 3000;
 
 exports.config = {
-  allScriptsTimeout: 40000,
+  allScriptsTimeout: 60000,
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
@@ -22,7 +22,7 @@ exports.config = {
   },
   directConnect: true,
   baseUrl: `http://localhost:${port}/`,
-  framework: 'jasmine',
+  framework: 'jasmine2',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
@@ -30,6 +30,7 @@ exports.config = {
     }
   },
   useAllAngular2AppRoots: true,
+  rootElement: 'app',
   beforeLaunch: function () {
     require('ts-node').register({
       project: 'e2e'

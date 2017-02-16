@@ -8,7 +8,7 @@
     "prebuild": "tslint src",
     "build": "webpack",
     "pree2e": "webdriver-manager update",
-    "e2e": "concurrently --kill-others --success first 'PORT=3030 npm start' 'sleep 2; PORT=3030 protractor'",
+    "e2e": "concurrently --kill-others --success first 'PORT=3030 webpack-dev-server' 'while ! `curl -s http://localhost:3030 | grep -q app.js`; do sleep 1; done; PORT=3030 protractor'",
     "test": "karma start",
     "test-single-run": "karma start --single-run"
   },
@@ -57,9 +57,10 @@
     "typings": "^2.1.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0",
-    "zone.js": "^0.7.6"
+    "zone.js": "^0.7.6",
+    "karma-webpack": "^2.0.2",
+    "karma-sourcemap-loader": "^0.3.7"
   },
   "devDependencies": {
-    "karma-webpack": "^2.0.2"
   }
 }

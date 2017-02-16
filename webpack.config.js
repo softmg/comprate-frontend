@@ -93,7 +93,7 @@ if (isDev) {
     new webpack.NoEmitOnErrorsPlugin()
   );
 } else if (isTest) {
-
+  config.devtool = 'inline-source-map';
 } else {
 
   const CompressionPlugin = require('compression-webpack-plugin');
