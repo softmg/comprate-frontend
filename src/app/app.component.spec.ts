@@ -1,7 +1,11 @@
+/*
+ * Copyright © 2017 Elbek Azimov. Contacts: <atom.azimov@gmail.com>
+ */
+
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -25,7 +29,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('app works!');
   }));
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render title in a app tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;

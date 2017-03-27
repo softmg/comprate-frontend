@@ -1,13 +1,14 @@
 language: node_js
 node_js:
-  - '6'
+  - '7'
 
 sudo: required
 dist: trusty
 
 cache:
   apt: true
-  directories: node_modules
+  directories:
+    - node_modules
 
 addons:
   apt:
