@@ -8,8 +8,6 @@ const coverage = process.env.COVERAGE || false;
 
 process.env.NODE_ENV = 'test';
 
-const HappyPack = require('happypack');
-
 const tsOptions = {
   compilerOptions: {
     "sourceMap": true,

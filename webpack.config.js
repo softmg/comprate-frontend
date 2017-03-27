@@ -52,17 +52,16 @@ let config = {
       },
       {
         test: /\.js$/,
-        use: 'happypack/loader?id=js',
-        exclude: /node_modules\/[^@]/
+        use: [{
+          loader: 'babel-loader', options: {
+            cacheDirectory: true
+          }
+        }],
+        exclude: (isDev || isTest) ? /node_modules/: /node_modules\/[^@]/
       }
     ]
   },
   plugins: [
-    new HappyPack({
-      id: 'js',
-      loaders: ['babel-loader']
-    }),
-
     // new FaviconsWebpackPlugin('favicon.png'),
   ]
 };
@@ -85,7 +84,7 @@ if (isDev) {
     inline: true,
     noInfo: true,
     // lazy: true,
-    quiet: true
+    // quiet: true
   };
 
   config.plugins.push(

@@ -17,7 +17,16 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      'args': ['show-fps-counter=true']
+      args: [
+        '--disable-infobars',
+        'show-fps-counter=true'
+      ],
+      prefs: {
+        // disable chrome's annoying password manager
+        'profile.password_manager_enabled': false,
+        'credentials_enable_service': false,
+        'password_manager_enabled': false
+      }
     }
   },
   directConnect: true,
