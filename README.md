@@ -14,8 +14,6 @@ Also we can offer the best way for upgrade your computer.
 
 ## Development guides
 - Code styles: Just follow [code styles for angular2][angular2-code-styles]
-- (optional) During writing code listen to this music
-     [![Acoustified Hits](https://avatars.yandex.net/get-music-content/38044/0ce2105a.a.3497234-1/m1000x1000)](https://music.yandex.ru/album/3530825)
 
 
 ## Development server
